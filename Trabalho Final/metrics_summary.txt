@@ -1,0 +1,25 @@
+================================================================================
+RESUMO DE MÉTRICAS - PROJETO FINAL
+================================================================================
+
+Acurácia: 0.9767 (97.67%)
+Precisão: 0.9754
+Recall (Sensibilidade): 0.9900
+F1-Score: 0.9826
+ROC-AUC: 0.9987
+
+Matriz de Confusão:
+Verdadeiros Negativos (TN): 95
+Falsos Positivos (FP): 5
+Falsos Negativos (FN): 2
+Verdadeiros Positivos (TP): 198
+
+Relatório de Classificação:
+              precision    recall  f1-score   support
+
+       Falsa       0.98      0.95      0.96       100
+     Genuína       0.98      0.99      0.98       200
+
+    accuracy                           0.98       300
+   macro avg       0.98      0.97      0.97       300
+weighted avg       0.98      0.98      0.98       300
