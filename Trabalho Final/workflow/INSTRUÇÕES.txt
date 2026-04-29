@@ -1,0 +1,77 @@
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║  ✓ WORKFLOW KNIME GERADO COM SUCESSO!                                    ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+📂 Local do Workflow:
+   /Users/vitorlima/knime-workspace/VitorHugoVasconcelosdeLima_ProjetoFinal/workflow
+
+🔧 COMO ABRIR NO KNIME:
+
+1. Abra o KNIME:
+   open /Applications/KNIME\ 5.8.3.app
+
+2. File → Import Workflow
+
+3. Selecione a pasta:
+   /Users/vitorlima/knime-workspace/VitorHugoVasconcelosdeLima_ProjetoFinal/workflow
+
+4. Clique Finish
+
+5. Abra o workflow no Explorer
+
+📋 O WORKFLOW CONTÉM:
+
+   • CSV Reader → Carrega fake_bills.csv
+   • Missing Value Handler → Trata valores faltantes
+   • Normalizer → Normaliza as features
+   • Partitioner → Divide em treino/teste (80/20)
+   • Deep Learning Keras Learner → Treina a rede neural
+   • Deep Learning Keras Executor → Faz predições
+   • Scorer → Calcula métricas
+   • Confusion Matrix → Mostra erros
+   • ROC Curve → Curva ROC
+
+🧠 ARQUITETURA DA REDE NEURAL:
+
+   Input (6 features)
+      ↓
+   Dense(64, ReLU)
+      ↓
+   Dense(32, ReLU)
+      ↓
+   Dense(16, ReLU)
+      ↓
+   Dense(1, Sigmoid)
+
+   Output: Classificação Binária (0 = Falsa, 1 = Genuína)
+
+⚙️ CONFIGURAÇÃO DE TREINAMENTO:
+
+   • Epochs: 50
+   • Batch Size: 32
+   • Optimizer: Adam
+   • Loss: Binary Crossentropy
+   • Early Stopping: Ativado (paciência: 20)
+   • Validação: 20%
+
+📊 RESULTADOS ESPERADOS:
+
+   • Acurácia: ~97.67%
+   • Recall: ~99.00%
+   • ROC-AUC: ~0.9987
+
+💡 DICAS:
+
+   1. Para executar um nó: Clique direito → Execute
+   2. Para ver dados: Clique duas vezes no nó → Data
+   3. Para resetar: Clique direito → Reset
+   4. Ctrl+Shift+F11 para executar tudo
+
+📚 DOCUMENTAÇÃO:
+
+   Veja o arquivo KNIME_GUIA.md para instruções detalhadas!
+
+═══════════════════════════════════════════════════════════════════════════
+
+Pronto para abrir no KNIME! 🎉

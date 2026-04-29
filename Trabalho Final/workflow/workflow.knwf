@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2003/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2003/XMLConfig http://www.knime.org/XMLConfig_2003.xsd">
+  <entry key="name" type="xString">VitorHugoVasconcelosdeLima_ProjetoFinal</entry>
+  <entry key="description" type="xString">Classificação de Notas Falsas com Redes Neurais</entry>
+  <entry key="author" type="xString">Vitor Hugo Vasconcellos de Lima</entry>
+  <entry key="email" type="xString">vitor.hugo.9999@gmail.com</entry>
+  <entry key="dataset" type="xString">fake_bills.csv</entry>
+
+  <config key="workflow_nodes">
+    <entry key="0" type="xString">CSV Reader - Carrega fake_bills.csv</entry>
+    <entry key="1" type="xString">Missing Value Handler - Trata NaNs</entry>
+    <entry key="2" type="xString">Normalizer - StandardScaler</entry>
+    <entry key="3" type="xString">Partitioner - 80/20 split estratificado</entry>
+    <entry key="4" type="xString">Deep Learning Keras Learner - Treina rede neural</entry>
+    <entry key="5" type="xString">Deep Learning Keras Executor - Predições</entry>
+    <entry key="6" type="xString">Scorer - Calcula métricas</entry>
+    <entry key="7" type="xString">Confusion Matrix - Matriz de confusão</entry>
+    <entry key="8" type="xString">ROC Curve - Curva ROC</entry>
+  </config>
+
+  <config key="network_architecture">
+    <entry key="input_features" type="xInt">6</entry>
+    <entry key="target" type="xString">is_genuine</entry>
+    <entry key="hidden_layer_1" type="xInt">64</entry>
+    <entry key="hidden_layer_2" type="xInt">32</entry>
+    <entry key="hidden_layer_3" type="xInt">16</entry>
+    <entry key="output" type="xInt">1</entry>
+    <entry key="activation" type="xString">ReLU</entry>
+    <entry key="output_activation" type="xString">Sigmoid</entry>
+  </config>
+
+  <config key="training_config">
+    <entry key="epochs" type="xInt">50</entry>
+    <entry key="batch_size" type="xInt">32</entry>
+    <entry key="optimizer" type="xString">Adam</entry>
+    <entry key="loss" type="xString">binary_crossentropy</entry>
+    <entry key="early_stopping" type="xBoolean">true</entry>
+    <entry key="early_stopping_patience" type="xInt">20</entry>
+    <entry key="validation_split" type="xDouble">0.2</entry>
+  </config>
+
+  <config key="data_config">
+    <entry key="train_size" type="xDouble">0.8</entry>
+    <entry key="test_size" type="xDouble">0.2</entry>
+    <entry key="stratified" type="xBoolean">true</entry>
+    <entry key="random_state" type="xInt">42</entry>
+  </config>
+</config>
